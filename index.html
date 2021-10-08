@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Archive</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+<body >
+  <h2 class="text-center mt-3 bg-info p-2">Welcome To BookPedia</h2>
+  <!-- search box -->
+  <section class="container my-5">    
+   <div class="d-flex justify-content-center">
+    <input type="text" class="form-control w-50 " name="" placeholder="Search Your Book Here" id="search-field">
+    <button onclick="loadData()" class="btn btn-outline-primary" id="search-button">Search</button>
+   </div>
+  </section>
+
+  <!-- error message -->
+  <section>
+    <div class="text-center text-danger fs-2" id="error">
+    
+    </div>
+  </section>
+
+  <!-- searched result -->
+  <section class="container">
+    <!-- spinner -->
+    <div class="text-center d-none" id="spinner">
+      <div  class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div id="searched-book" class="row g-5">
+
+    </div>
+  </section>
+
+  <!-- total  -->
+  <section>
+    <div >
+      <h2 class="text-center text-primary fs-1 mt-5" id="match-result"></h2>
+    </div>
+  </section>
+  
+
+
+  
+
+  <script src="book.js"></script>
+</body>
+</html>
