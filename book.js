@@ -38,17 +38,19 @@ const displayBook = (property) => {
   // clear previous result
   searchedBook.textContent = "";
   const books = property.docs;
+  console.log(property);
   books.forEach((book) => {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
     <div class="card h-100 gy-4" style="width: 18rem;">
           <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top img-fluid" alt="book-cover">
+          
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Book Name: ${book.title}</li>
-            <li class="list-group-item">Author: ${book.author_name[0]}</li>
-            <li class="list-group-item">Publisher: ${book.publisher[0]}</li>
-            <li class="list-group-item">First Publish Year: ${book.publish_year[0]}</li>
+            <li class="list-group-item">Author: ${book.author_name?.[0]}</li>
+            <li class="list-group-item">Publisher: ${book.publisher?.[0]}</li>
+            <li class="list-group-item">First Publish Year: ${book.publish_year?.[0]}</li>
           </ul>          
         </div>
     `;
